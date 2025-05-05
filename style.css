@@ -1,0 +1,52 @@
+body {
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px; /* Garante que o conteúdo não fique coberto pelo footer */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #c0eaff, #a1d3f7);
+}
+
+.logo {
+    width: 500px;
+    height: auto;
+}
+
+.botao {
+    background-color: #1e6dd6;
+    color: white;
+    border: 4px solid #0b3b89;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 12px;
+    margin: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Press Start 2P';
+}
+
+.botao:hover {
+    background-color: #0b3b89;
+    transform: scale(1.05);
+}
+
+/* Estilização do Footer para a grama */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Ajuste a altura da grama */
+    background-image: url('grama.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    text-align: center;
+}
