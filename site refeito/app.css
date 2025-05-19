@@ -9,7 +9,7 @@ html, body {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    background-image: url(storage/img/.png);
+    background-image: url("fundo.png");
     background-size: cover;
 }
 
