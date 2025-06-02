@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PixelPets - Adoção</title>
+  <!-- Font Awesome (para ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="adocao.css">
+</head>
+<body>
+  <!-- Navbar Fixa -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+    <a href="app.html"><img src="logo_pixelpets.png" alt="Pixel Pets" id="logomenu"></a>
+    </div>
+    <ul class="navbar__menu">
+        <li><a href="app.html">Início</a></li>
+        <li><a href="#">Sobre nós</a></li>
+      <li><a href="fale.html">Fale Conosco <img src="fale (2).png" class="icon2"></a></li>
+      <li><a href="ajude.html">Ajude <img src="ajude.png" class="icon2"></a></li>
+      <li><a href="entrar.html">Entrar</a></li>
+      <li><a href="cadastrar.html">Cadastrar-se</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <div class="adoption-page" style="padding-top: 100px;">
+    <h1 class="page-title">Encontre seu novo melhor amigo!</h1>
+    <h2 class="pets-title">Pets disponíveis para adoção</h2>
+
+    <!-- GRID DE CARDS (12 exemplos) -->
+    <div class="pets-grid">
+      <!-- Pet 1 -->
+      <div class="pet-card" onclick="openPetModal(1)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/96/20/aa/9620aad5e07920b5e64f55a5cb3eaf8b.jpg"
+               alt="Cacau" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">ASSOCIAÇÃO MEU AMIGO FOFINHO</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Cacau</h3>
+            <img src="masculino.png" alt="Masculino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 2 -->
+      <div class="pet-card" onclick="openPetModal(2)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/fd/e0/ea/fde0ea93973df5e6f1d7bb5e6954f5ad.jpg"
+               alt="Luna" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">ONG PATINHAS FELIZES</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Luna</h3>
+            <img src="feminino.png" alt="Feminino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 3 -->
+      <div class="pet-card" onclick="openPetModal(3)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/ff/34/fa/ff34fa6dad30f2bc36d8528fa461a282.jpg"
+               alt="Thor" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">ASSOCIAÇÃO PROTETORA DE ANIMAIS</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Thor</h3>
+            <img src="masculino.png" alt="Masculino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Belo Horizonte, MG</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 4 -->
+      <div class="pet-card" onclick="openPetModal(4)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/e0/4b/f4/e04bf44c5ca564e067b84a0a11c267b7.jpg"
+               alt="Mel" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">PROJETO ADOTE UM AMIGO</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Mel</h3>
+            <img src="feminino.png" alt="Feminino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Campinas, SP</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 5 -->
+      <div class="pet-card" onclick="openPetModal(5)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/2d/39/1b/2d391b9264b58453980399b4b260b744.jpg"
+               alt="Adão" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">ASSOCIAÇÃO ADOTEPETZ</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Adão</h3>
+            <img src="masculino.png" alt="Masculino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Brasília, DF</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 6 -->
+      <div class="pet-card" onclick="openPetModal(6)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/30/28/d8/3028d87f051322a6e8bd6932322b4077.jpg"
+               alt="Bella" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">ONG LAR DE PATAS FELIZES</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Bella</h3>
+            <img src="feminino.png" alt="Feminino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Curitiba, PR</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 7 -->
+      <div class="pet-card" onclick="openPetModal(7)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/dd/8c/85/dd8c855d039f30113b94d14bf424e2b7.jpg"
+               alt="Nina" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">ASSOCIAÇÃO AMIGOS DO BICHO</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Nina</h3>
+            <img src="feminino.png" alt="Feminino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Fortaleza, CE</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 8 -->
+      <div class="pet-card" onclick="openPetModal(8)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/76/94/f4/7694f49c9513a00ee8b6cc334f8ee92d.jpg"
+               alt="Zoiudo" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">ONG PROTEÇÃO ANIMAL VIDA</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Zoiudo</h3>
+            <img src="masculino.png" alt="Masculino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Salvador, BA</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 9 -->
+      <div class="pet-card" onclick="openPetModal(9)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/33/e4/e9/33e4e9eb16e5e60c47f779416a811fa7.jpg"
+               alt="Chico" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">ONG LAR DOS SHITZUS</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Chico</h3>
+            <img src="masculino.png" alt="Masculino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Campinas, SP</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 10 -->
+      <div class="pet-card" onclick="openPetModal(10)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/3d/33/25/3d3325e4c6fb3ad061b4d0d651dbbe97.jpg"
+               alt="Marley" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">CÃO AO RESGATE</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Marley</h3>
+            <img src="masculino.png" alt="Masculino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 11 -->
+      <div class="pet-card" onclick="openPetModal(11)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/31/ee/b1/31eeb1b31d0bf6b0619af36577b6a39f.jpg"
+               alt="Purê" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">GATOS SRD UNIDOS</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Purê</h3>
+            <img src="masculino.png" alt="Masculino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Belo Horizonte, MG</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+
+      <!-- Pet 12 -->
+      <div class="pet-card" onclick="openPetModal(12)">
+        <div class="pet-image-wrapper">
+          <img src="https://i.pinimg.com/736x/d3/14/ed/d314ed02441dd6fb500bc39c7304d2cb.jpg"
+               alt="Alasca" class="pet-image" />
+          <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pet-info">
+          <p class="pet-org">PORQUINHOS FELIZES</p>
+          <div class="pet-header">
+            <h3 class="pet-name">Alasca</h3>
+            <img src="feminino.png" alt="Feminino" class="pet-gender-icon" />
+          </div>
+          <p class="pet-location"><i class="fas fa-map-marker-alt"></i> Fortaleza, CE</p>
+          <button class="btn-adopt">Quero adotar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Detalhes (apenas texto, sem formulário) -->
+  <div class="modal" id="pet-modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closePetModal()">&times;</span>
+      <div class="pet-details">
+        <!-- Coluna da imagem -->
+        <div class="pet-details-left">
+          <img id="modal-pet-image" src="" alt="Pet" class="pet-details-image">
+        </div>
+        <!-- Coluna das informações em texto -->
+        <div class="pet-details-right">
+          <!-- Nome -->
+          <div class="detail-item">
+            <span class="detail-label">Nome do Pet:</span>
+            <span id="modal-pet-name" class="detail-value"></span>
+          </div>
+
+          <!-- Idade -->
+          <div class="detail-item">
+            <span class="detail-label">Idade:</span>
+            <span id="modal-pet-age" class="detail-value"></span>
+          </div>
+
+          <!-- Raça -->
+          <div class="detail-item">
+            <span class="detail-label">Raça:</span>
+            <span id="modal-pet-breed" class="detail-value"></span>
+          </div>
+
+          <!-- Espécie -->
+          <div class="detail-item">
+            <span class="detail-label">Espécie:</span>
+            <span id="modal-pet-species" class="detail-value"></span>
+          </div>
+
+          <!-- Peso -->
+          <div class="detail-item">
+            <span class="detail-label">Peso (kg):</span>
+            <span id="modal-pet-weight" class="detail-value"></span>
+          </div>
+
+          <!-- Altura -->
+          <div class="detail-item">
+            <span class="detail-label">Altura (cm):</span>
+            <span id="modal-pet-height" class="detail-value"></span>
+          </div>
+
+          <!-- Sobre o Pet -->
+          <div class="detail-item">
+            <span class="detail-label">Sobre o Pet:</span>
+            <p id="modal-pet-description" class="detail-description"></p>
+          </div>
+
+          <!-- Características -->
+          <div class="detail-item">
+            <span class="detail-label">Características:</span>
+            <span id="modal-pet-features" class="detail-value"></span>
+          </div>
+
+          <!-- Cidade -->
+          <div class="detail-item">
+            <span class="detail-label">Cidade:</span>
+            <span id="modal-pet-city" class="detail-value"></span>
+          </div>
+
+          <!-- Estado -->
+          <div class="detail-item">
+            <span class="detail-label">Estado:</span>
+            <span id="modal-pet-state" class="detail-value"></span>
+          </div>
+
+          <!-- Botão “Quero adotar este pet” -->
+          <div class="modal-adopt-button-wrapper">
+            <button id="btn-modal-adopt" class="btn-adopt">Quero adotar este pet</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript para preencher e abrir/fechar modal -->
+  <script>
+    // Dados dos 12 pets (com todos os campos)
+    const petsData = {
+      1: {
+        name: "Cacau",
+        age: "6 meses",
+        breed: "SRD",
+        species: "Gato",
+        weight: "5.2",
+        height: "23",
+        description: "Um filhote muito brincalhão e amoroso, adora crianças. Está castrado.",
+        features: ["Castrado"],
+        city: "São Paulo",
+        state: "SP",
+        image: "https://i.pinimg.com/736x/96/20/aa/9620aad5e07920b5e64f55a5cb3eaf8b.jpg"
+      },
+      2: {
+        name: "Luna",
+        age: "3 anos",
+        breed: "SRD",
+        species: "Cachorro",
+        weight: "30",
+        height: "60",
+        description: "Luna é dócil e adora brincar na água. Já está vacinada, vermifugada e castrada.",
+        features: ["Vacinado", "Vermifugado", "Castrado"],
+        city: "Rio de Janeiro",
+        state: "RJ",
+        image: "https://i.pinimg.com/736x/fd/e0/ea/fde0ea93973df5e6f1d7bb5e6954f5ad.jpg"
+      },
+      3: {
+        name: "Thor",
+        age: "5 anos",
+        breed: "SRD",
+        species: "Cachorro",
+        weight: "35",
+        height: "65",
+        description: "Thor é protetor e muito inteligente. Precisa de um tutor experiente. Vacinas em dia, castrado e microchipado.",
+        features: ["Vacinado", "Castrado", "Microchip"],
+        city: "Belo Horizonte",
+        state: "MG",
+        image: "https://i.pinimg.com/736x/ff/34/fa/ff34fa6dad30f2bc36d8528fa461a282.jpg"
+      },
+      4: {
+        name: "Mel",
+        age: "2 anos",
+        breed: "SRD",
+        species: "Gato",
+        weight: "8",
+        height: "25",
+        description: "Mel é calma e adora cochilar ao sol. Está vacinada e castrada. Prefere ambientes tranquilos.",
+        features: ["Vacinado", "Castrado"],
+        city: "Campinas",
+        state: "SP",
+        image: "https://i.pinimg.com/736x/e0/4b/f4/e04bf44c5ca564e067b84a0a11c267b7.jpg"
+      },
+      5: {
+        name: "Adão",
+        age: "1",
+        breed: "SRD",
+        species: "Periquito",
+        weight: "3.5",
+        height: "17",
+        description: "Adão é bem curioso e adora brincar com bolinhas. É o último de sua ninhada.",
+        features: ["Vacinado"],
+        city: "Brasília",
+        state: "DF",
+        image: "https://i.pinimg.com/736x/2d/39/1b/2d391b9264b58453980399b4b260b744.jpg"
+      },
+      6: {
+        name: "Bella",
+        age: "4",
+        breed: "SRD",
+        species: "Cachorro",
+        weight: "28",
+        height: "55",
+        description: "Bella é muito carinhosa e adora nadar. Vacinas em dia e vermifugada.",
+        features: ["Vacinado", "Vermifugado"],
+        city: "Curitiba",
+        state: "PR",
+        image: "https://i.pinimg.com/736x/30/28/d8/3028d87f051322a6e8bd6932322b4077.jpg"
+      },
+      7: {
+        name: "Nina",
+        age: "3 meses",
+        breed: "SRD",
+        species: "Gato",
+        weight: "5.4",
+        height: "20",
+        description: "Nina é pequena e muito carinhosa. Ótima para apartamento. Vacinação completa e vermifugada.",
+        features: ["Vacinado", "Vermifugado"],
+        city: "Fortaleza",
+        state: "CE",
+        image: "https://i.pinimg.com/736x/dd/8c/85/dd8c855d039f30113b94d14bf424e2b7.jpg"
+      },
+      8: {
+        name: "Zoiudo",
+        age: "2",
+        breed: "Hamster",
+        species: "Roedor",
+        weight: "1",
+        height: "5",
+        description: "Zoiudo adora roer e explorar o ambiente. Muito dócil e amigável. Vacinas em dia, vermifugado e castrado.",
+        features: ["Vacinado", "Vermifugado", "Castrado"],
+        city: "Salvador",
+        state: "BA",
+        image: "https://i.pinimg.com/736x/76/94/f4/7694f49c9513a00ee8b6cc334f8ee92d.jpg"
+      },
+      9: {
+        name: "Chico",
+        age: "2 anos",
+        breed: "Shitzu",
+        species: "Cachorro",
+        weight: "6.0",
+        height: "28",
+        description: "Chico é muito carinhoso e adora colo. Está vacinado, vermifugado e castrado.",
+        features: ["Vacinado", "Vermifugado", "Castrado"],
+        city: "Campinas",
+        state: "SP",
+        image: "https://i.pinimg.com/736x/33/e4/e9/33e4e9eb16e5e60c47f779416a811fa7.jpg"
+      },
+      10: {
+        name: "Marley",
+        age: "1 ano",
+        breed: "Fox Paulistinha",
+        species: "Cachorro",
+        weight: "9.0",
+        height: "30",
+        description: "Marley adora correr no quintal e brincar com brinquedos de borracha. Vacinas em dia e castrado.",
+        features: ["Vacinado", "Castrado"],
+        city: "São Paulo",
+        state: "SP",
+        image: "https://i.pinimg.com/736x/3d/33/25/3d3325e4c6fb3ad061b4d0d651dbbe97.jpg"
+      },
+      11: {
+        name: "Purê",
+        age: "1 ano",
+        breed: "SRD",
+        species: "Gato",
+        weight: "4.5",
+        height: "22",
+        description: "Purê é curioso e adora explorar cantos. Ficou muito feliz ao ser resgatado. Vacinas em dia e castrado.",
+        features: ["Vacinado", "Castrado"],
+        city: "Belo Horizonte",
+        state: "MG",
+        image: "https://i.pinimg.com/736x/31/ee/b1/31eeb1b31d0bf6b0619af36577b6a39f.jpg"
+      },
+      12: {
+        name: "Alasca",
+        age: "6 meses",
+        breed: "Porquinho-da-Índia",
+        species: "Roedor",
+        weight: "0.7",
+        height: "8",
+        description: "Alasca é muito gentil e adora companhia. Ótimo para crianças. Vermifugada.",
+        features: ["Vermifugado"],
+        city: "Fortaleza",
+        state: "CE",
+        image: "https://i.pinimg.com/736x/d3/14/ed/d314ed02441dd6fb500bc39c7304d2cb.jpg"
+      }
+    };
+
+    const modal = document.getElementById('pet-modal');
+
+    function openPetModal(id) {
+      const pet = petsData[id];
+      if (!pet) return;
+
+      // Preenche imagem
+      document.getElementById('modal-pet-image').src = pet.image;
+
+      // Preenche texto de cada campo
+      document.getElementById('modal-pet-name').textContent = pet.name;
+      document.getElementById('modal-pet-age').textContent = pet.age;
+      document.getElementById('modal-pet-breed').textContent = pet.breed;
+      document.getElementById('modal-pet-species').textContent = pet.species;
+      document.getElementById('modal-pet-weight').textContent = pet.weight;
+      document.getElementById('modal-pet-height').textContent = pet.height;
+      document.getElementById('modal-pet-description').textContent = pet.description;
+      // junta as características em um único texto separado por vírgula
+      document.getElementById('modal-pet-features').textContent = pet.features.join(', ');
+      document.getElementById('modal-pet-city').textContent = pet.city;
+      document.getElementById('modal-pet-state').textContent = pet.state;
+
+      // Exibe o modal
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePetModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Fechar modal ao clicar fora
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closePetModal();
+      }
+    };
+
+    // Exemplo de ação do botão “Quero adotar este pet”
+    document.getElementById('btn-modal-adopt').addEventListener('click', function() {
+      alert('Encaminhando para o formulário de adoção...');
+      // Aqui você pode redirecionar para outro link, ex:
+      // window.location.href = 'formulario.html';
+    });
+  </script>
+</body>
+</html>

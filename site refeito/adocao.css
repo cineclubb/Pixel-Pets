@@ -1,0 +1,394 @@
+/* ==============================
+   Reset geral
+   ============================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    background-size: cover;
+    background-image: url('fundo.png');
+  }
+  
+  /* ==============================
+     Navbar (sem alterações)
+     ============================== */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    z-index: 100;
+    border-bottom: 4.5px solid #191963;
+    height: 80px; 
+    background-color: #93cdee;
+  }
+  
+  .icon2 {
+    height: 30px;     
+    width: 33px;       
+    margin-left: 6px;         
+    vertical-align: middle;   
+    position: relative;
+    top: -2px;
+  }
+  
+  #logomenu {
+    width: 145px;
+    height: 80px;
+  }
+  
+  .navbar__logo img {
+    height: 40px;
+  }
+  
+  .navbar__menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 0; 
+    margin-right: 2rem; 
+  }
+  
+  .navbar__menu a {
+    text-decoration: none;
+    color: #191963;
+    font-weight: 600;
+    font-size: 1.4rem; 
+    padding: 0.5rem 1rem; 
+    transition: all 0.3s ease;
+  }
+  
+  .navbar__menu a:hover {
+    color: #4a4a9e; 
+  }
+  
+  /* ==============================
+     Conteúdo principal
+     ============================== */
+  .adoption-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .page-title {
+    text-align: center;
+    color: #191963;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+  }
+  
+  /* Título acima das cards */
+  .pets-title {
+    text-align: center;
+    color: #191963;
+    margin: 2rem 0;
+    font-size: 1.8rem;
+  }
+  
+  /* ==============================
+     GRID DE CARDS (sem filtros)
+     ============================== */
+  .pets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* ==============================
+     ESTILO DA CARD
+     ============================== */
+  .pet-card {
+    background-color: #e6f5fd;      /* Azul clarinho de fundo */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  
+  /* Wrapper da imagem (para manter proporção e posicionar “Curtir”) */
+  .pet-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;             /* Define proporção 4:3 para a foto */
+    background-color: #e3f2ff;
+  }
+  
+  .pet-image-wrapper .pet-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Botão de “Curtir” sobreposto no canto superior direito */
+  .btn-like {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #e3f2ff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .btn-like:hover {
+    background: #e3f2ff;
+  }
+  
+  .btn-like i {
+    font-size: 18px;
+    color: #191963;
+  }
+  
+  /* Conteúdo de texto dentro da card: nome, ONG, localização, botão */
+  .pet-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  /* ONG / Associação (texto pequeno, caixa alta, cor laranja clara) */
+  .pet-org {
+    font-size: 0.75rem;
+    color: #191963;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Cabeçalho com nome + ícone de sexo */
+  .pet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pet-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #191963;
+    margin: 0;
+  }
+  
+  .pet-gender-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Localização com ícone de mapa */
+  .pet-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .pet-location i {
+    color: #191963;
+  }
+  
+  /* Botão “Quero adotar” */
+  .btn-adopt, .adopt-btn {
+    margin-top: auto;             /* Empurra o botão para baixo */
+    background-color: #191963;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+  }
+  
+  .btn-adopt:hover {
+    background-color: #191963;
+  }
+  
+  /* ==============================
+     MODAL DE DETALHES DO PET
+     ============================== */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .modal-content {
+    background: #e3f2ff;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    border: 4px solid #191963;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #191963;
+    cursor: pointer;
+    z-index: 10;
+    background: #e3f2ff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pet-details {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  
+  .pet-details-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .pet-details-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #191963;
+  }
+  
+  .pet-details-right {
+    flex: 1;
+    min-width: 300px;
+    padding: 0 2rem;
+  }
+  
+  .pet-details-name {
+    font-size: 2rem;
+    color: #191963;
+    margin-bottom: 1rem;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .detail-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #ccc;
+  }
+  
+  .detail-label {
+    font-weight: bold;
+    color: #191963;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+  }
+  
+  .detail-value {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .detail-description {
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  /* ==============================
+     RESPONSIVIDADE
+     ============================== */
+  @media (max-width: 992px) {
+    .pet-details {
+      flex-direction: column;
+    }
+  
+    .pet-details-right {
+      padding: 2rem 0 0 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem;
+      height: 70px;
+    }
+  
+    #logomenu {
+      width: 120px;
+      height: 60px;
+    }
+  
+    .navbar__menu {
+      gap: 0.8rem;
+    }
+  
+    .navbar__menu a {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.6rem;
+    }
+  
+    .icon2 {
+      height: 20px;
+      width: 20px;
+    }
+  
+    .pets-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .pets-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

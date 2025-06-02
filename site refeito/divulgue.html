@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PixelPets - Divulgar Pet</title>
+  <link rel="stylesheet" href="app.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Navbar Fixa -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+    <a href="app.html"><img src="logo_pixelpets.png" alt="Pixel Pets" id="logomenu"></a>
+    </div>
+    <ul class="navbar__menu">
+        <li><a href="app.html">Início</a></li>
+        <li><a href="#">Sobre nós</a></li>
+      <li><a href="fale.html">Fale Conosco <img src="fale (2).png" class="icon2"></a></li>
+      <li><a href="ajude.html">Ajude <img src="ajude.png" class="icon2" /></a></li>
+      <li><a href="entrar.html">Entrar</a></li>
+      <li><a href="cadastrar.html">Cadastrar-se</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content main-form">
+    <section class="form-container">
+      <h1>Divulgar Pet para Adoção</h1>
+      <p class="form-description">Preencha o formulário abaixo para ajudar seu pet a encontrar um novo lar amoroso!</p>
+
+      <form id="pet-form" class="pet-form">
+        <!-- Upload de Imagem -->
+        <div class="form-group">
+            <label for="pet-image">Foto do Pet:</label>
+            <div class="image-upload" id="image-upload">
+              <input type="file" id="pet-image" accept="image/*" required style="display:none;" />
+              <div class="image-preview" id="image-preview" style="cursor:pointer; border: 2px dashed #ccc; padding: 20px; text-align: center;">
+                <img src="" alt="Pré-visualização da imagem" id="preview-img" style="display: none; max-width: 100%; height: auto; margin-bottom: 10px;" />
+                <span id="upload-text">+ Clique para adicionar foto</span>
+              </div>
+            </div>
+          </div>          
+
+        <!-- Informações Básicas -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pet-name">Nome do Pet:</label>
+            <input type="text" id="pet-name" placeholder="Ex: Rex, Luna, Thor" required />
+          </div>
+
+          <div class="form-group">
+            <label for="pet-age">Idade (anos):</label>
+            <input type="number" id="pet-age" min="0" max="30" placeholder="Ex: 2" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pet-breed">Raça:</label>
+            <input type="text" id="pet-breed" placeholder="Ex: Vira-lata, Golden Retriever" required />
+          </div>
+
+          <div class="form-group">
+            <label for="pet-species">Espécie:</label>
+            <select id="pet-species" required>
+              <option value="">Selecione</option>
+              <option value="cachorro">Cachorro</option>
+              <option value="gato">Gato</option>
+              <option value="passaro">Pássaro</option>
+              <option value="roedor">Roedor</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pet-weight">Peso (kg):</label>
+            <input type="number" id="pet-weight" min="0" max="100" step="0.1" placeholder="Ex: 5.2" required />
+          </div>
+
+          <div class="form-group">
+            <label for="pet-height">Altura (cm):</label>
+            <input type="number" id="pet-height" min="0" max="200" placeholder="Ex: 45" required />
+          </div>
+        </div>
+
+        <!-- Descrição -->
+        <div class="form-group">
+          <label for="pet-description">Sobre o Pet:</label>
+          <textarea id="pet-description" rows="5" placeholder="Descreva a personalidade, hábitos, necessidades especiais, histórico de saúde, etc..." required></textarea>
+        </div>
+
+        <!-- Características -->
+        <div class="form-group">
+          <label>Características:</label>
+          <div class="pet-features">
+            <label><input type="checkbox" name="pet-features" value="vacinado" /> Vacinado</label>
+            <label><input type="checkbox" name="pet-features" value="vermifugado" /> Vermifugado</label>
+            <label><input type="checkbox" name="pet-features" value="castrado" /> Castrado</label>
+            <label><input type="checkbox" name="pet-features" value="microchip" /> Microchip</label>
+          </div>
+        </div>
+
+        <!-- Contato -->
+        <div class="form-group">
+          <label for="contact-info">Seus dados para contato:</label>
+          <input type="text" id="contact-info" placeholder="Nome + WhatsApp ou E-mail" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" placeholder="Ex: Campinas, João Pessoa" required />
+          </div>
+
+          <div class="form-group">
+            <label for="estado">Estado:</label>
+            <select id="estado" required>
+              <option value="">Selecione</option>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AP">AP</option>
+              <option value="AM">AM</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MT">MT</option>
+              <option value="MS">MS</option>
+              <option value="MG">MG</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PR">PR</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SP">SP</option>
+              <option value="SE">SE</option>
+              <option value="TO">TO</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn submit-btn">Divulgar Pet <img src="divulgue.png" id="icon" /></button>
+      </form>
+    </section>
+  </main>
+
+  <script src="scriptdi.js"></script>
+</body>
+</html>
